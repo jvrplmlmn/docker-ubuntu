@@ -1,11 +1,31 @@
 # Ubuntu Docker images
 
-## Trusty (14.04)
+## Supported tags and respective Dockerfile links
 
-### Build
+- Ubuntu Trusty Tahr (14.04) [`trusty` (*trusty/Dockerfile*)](https://github.com/jvrplmlmn/docker-ubuntu/blob/master/trusty/Dockerfile)
+- Ubuntu Xenial Xerus (16.04) [`xenial` (*trusty/Dockerfile*)](https://github.com/jvrplmlmn/docker-ubuntu/blob/master/xenial/Dockerfile)
 
-    docker build --no-cache --force-rm=true -t jvrplmlmn/ubuntu:trusty trusty/
+## Build it
 
-### Run
+To create the image jvrplmlmn/ubuntu with one tag per Ubuntu release, execute the following commands:
 
-    ./trusty/sshd.sh
+```
+docker build -t jvrplmlmn/ubuntu:trusty trusty/
+docker build -t jvrplmlmn/ubuntu:xenial xenial/
+```
+
+## Pull it from DockerHub
+
+```
+docker pull jvrplmlmn/ubuntu:trusty
+docker pull jvrplmlmn/ubuntu:xenial
+```
+
+## Run it
+
+Use the following scripts:
+
+```
+./trusty/sshd.sh
+./xenial/sshd.sh
+```
